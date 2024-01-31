@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const display = document.querySelector(".display");
   const buttons = document.querySelectorAll(".buttons button");
-  let currentInput = "0";  // Set initial value to "0"
+  let currentInput = "0";
   let previousInput = "";
   let operator = "";
 
@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleOperatorClick(op) {
     if (currentInput !== "") {
       if (previousInput !== "") {
-        calculate(); // Perform calculation if previous input exists
+        calculate();
       } else {
         previousInput = currentInput;
       }
       operator = op;
-      currentInput = ""; // Clear current input to start a new number
-      updateDisplay(); // Show the operator immediately
+      currentInput = "";
+      updateDisplay();
     }
   }
 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function clearCalculator() {
-    currentInput = "0";  // Reset currentInput to "0"
+    currentInput = "0";
     previousInput = "";
     operator = "";
   }
